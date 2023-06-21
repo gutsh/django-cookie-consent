@@ -1,6 +1,6 @@
 [project]
 name = "django-cookie_consent_gutsh"
-version = "1.0.0"
+version = "1.0.1"
 authors = [
     { name="Artem Barskii", email="artemiy.barskiy@gmail.com" },
 ]
