@@ -24,10 +24,10 @@ Cookie consent is a Django app to show consent component for web-cookies.
   {% block cookie_consent %}
     <link rel="stylesheet" href="{% static 'cookie_consent/css/index.css' %}">
     {% include 'cookie_consent/includes/consent.html' %}
-    <script type="module" src="/assets/js/toolkit/cookie_consent.js"></script>
+    <script defer src="{% static 'cookie_consent/js/main.js' %}"></script>
   {% endblock %}
   ```
 
-  Don't forget to serve that script and css files! You can find them in distribution, css is in both source and compiled forms and is already fine (as long as you run `collectstatic` command), and javascript is available under `assets/js/tookit`.
+  Don't forget to serve that script and css files! You can find them in distribution, css and js are in both source and compiled forms and is are fine (as long as you run `collectstatic` command).
 
 5. Start the development server and visit necessary pages.
