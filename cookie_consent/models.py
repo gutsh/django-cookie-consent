@@ -1,11 +1,11 @@
-from django.contrib.auth.models import User
+from django.conf import settings
 
 from django.db import models
 
 class CookieConsentAcceptance(models.Model):
     user = models.OneToOneField(
-        User, models.CASCADE,
-        related_name='cookie_consent'
+        settings.AUTH_USER_MODEL, models.CASCADE,
+        related_name='cookie_consent',
     )
 
     def __str__(self) -> str:
