@@ -23,7 +23,8 @@ Cookie consent is a Django app to show consent component for web-cookies.
   ```
   {% block cookie_consent %}
     <link rel="stylesheet" href="{% static 'cookie_consent/css/index.css' %}">
-    {% include 'cookie_consent/includes/consent.html' %}
+    {% include 'cookie_consent/includes/consent.html' with consent_text='We use cookies to understand your interactions with this web-site.' %}
+    {# the default for `consent_text` is 'We are using cookies to make this website fully functional.' #}
     <script defer src="{% static 'cookie_consent/js/main.js' %}"></script>
   {% endblock %}
   ```
@@ -34,5 +35,5 @@ Cookie consent is a Django app to show consent component for web-cookies.
 
 ## Coming up next
 
+- Improve naming more
 - Tests (front-end too!)
-- automate build and push (in many ways!)
