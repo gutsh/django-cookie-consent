@@ -6,8 +6,8 @@ on:
       - main
 
 env:
-  TWINE_USERNAME: ${{ secrets.TWINE_USERNAME }}
-  TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
+  TWINE_USERNAME: __token__
+  TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
 
 jobs:
   build-and-push:
