@@ -19,4 +19,4 @@ jobs:
           python3 -m build
       - run: |
           python3 -m pip install --upgrade twine
-          python3 -m twine upload -r pypi dist/*
+          python3 -m twine upload --verbose -r pypi dist/*
