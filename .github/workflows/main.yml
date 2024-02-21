@@ -6,14 +6,14 @@ on:
       - main
 
 env:
-  TWINE_USERNAME: gutsh
-  TWINE_PASSWORD: 
+  TWINE_USERNAME: ${{ secrets.TWINE_USERNAME }}
+  TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
     steps:
-      - use: actions/checkout@v3
+      - uses: actions/checkout@v3
       - run: |
           python3 -m pip install --upgrade build
           python3 -m build
