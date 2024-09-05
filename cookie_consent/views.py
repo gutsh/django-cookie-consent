@@ -43,7 +43,7 @@ class Acceptor(View):
             cons, created = None, False
             LOGGER.info("Cookie consent on not authenticated user")
         d = {
-            'consent': cons,
+            'consent': cons.pk,
             'created': created,
         }
         if not u.is_authenticated:
