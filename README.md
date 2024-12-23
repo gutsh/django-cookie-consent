@@ -4,21 +4,24 @@ Cookie consent is a Django app to show consent component for web-cookies.
 
 ## Quick start
 
-1. Add "cookie\_consent" to your `INSTALLED_APPS` setting like this:
+1. Add "cookie\_consent" in your `settings.py`:
 ```
+    ...
     INSTALLED_APPS = [
+        ...,
         "cookie_consent",
         ...,
     ]
+    ...
 ```
-2. Include the cookie\_consent URLconf in your project urls.py like this:
+2. Include the url config like this:
 ```
     path("cookie_consent/", include("cookie_consent.urls")),
 ```
-3. Run `python manage.py migrate` to create the models.
+3. Run `python manage.py migrate cookie_consent` to create the models.
 4. Include consent template in your web-site templates.
   
-  For example, I've included that text near the and of my base template:
+  For example, I've included the following near the end of my base template:
 
   ```
   {% block cookie_consent %}
@@ -35,5 +38,4 @@ Cookie consent is a Django app to show consent component for web-cookies.
 
 ## Coming up next
 
-- Improve naming more
-- Tests (front-end too!)
+- Automated testing
